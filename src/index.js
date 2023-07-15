@@ -1,4 +1,8 @@
-console.log("I am running.");
+import './style.css';
+import hamburger from './hamburger.jpg';
+
+
+
 const body = document.querySelector("body");
 
 const navbar = document.createElement("div");
@@ -23,8 +27,8 @@ const heroSection = document.createElement("div");
 const title = document.createElement("h1");
 title.classList.add("title");
 title.textContent = "Joe's Big Grill.";
-const burger = document.createElement("img");
-burger.src = "hamburger.jpg"; //fix this to work with webpack
+const burger = new Image();
+burger.src = hamburger;
 const content = document.createElement("p");
 content.textContent = "Boy we sure love grillin' around here.";
 
@@ -39,6 +43,7 @@ monFri.textContent = "9am-9pm Mon-Fri";
 const weekend = document.createElement("li");
 weekend.textContent = "12pm-12am Sat-Sun";
 const button = document.createElement("button");
+button.textContent = "ORDER PICKUP";
 
 const footer = document.createElement("div");
 footer.classList.add("footer");
