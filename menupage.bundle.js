@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrestaurant_page=self.webpackChunkrestaurant_page||[]).push([[822],{247:(e,a,p)=>{p.p,p.p,p.p}},e=>{e(e.s=247)}]);
