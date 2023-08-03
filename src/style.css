@@ -22,6 +22,14 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
+li {
+    list-style-type: none;
+}
+
 body {
     font-family: 'Nanum Myeongjo', serif;
     text-align: center;
@@ -32,6 +40,54 @@ img {
     height: auto;
     width: 600px;
 }
+
+.titleSection:first-child{
+    font-size: 1.5rem;
+}
+
+.titleSection:nth-child(1){
+    font-size: 1.15rem;
+}
+
+main {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    height:1000px;
+    width: 800px;
+    margin:auto;
+}
+
+.menu {
+    display: grid;
+    justify-content: center;
+
+    grid-template-columns: 300px auto;
+    grid-template-rows: 1fr;
+    row-gap: 20px;
+
+    margin-top: 50px;
+}
+
+.menu * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu img {
+    max-width:200px;
+}
+
+.menu li {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
 
 .schedule {
     font-family: 'Roboto', sans-serif;
