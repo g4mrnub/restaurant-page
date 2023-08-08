@@ -3,13 +3,13 @@ import homePage from './homepage';
 import menuPage from './menupage';
 import aboutPage from './aboutpage';
 
-function switchTab(tab){
+function switchTab(parent, tab){
     //remove the current page
-    while(content.firstChild){
-        content.removeChild(content.firstChild);
+    while(parent.firstChild){
+        parent.removeChild(parent.firstChild);
     }
     //add the clicked tab's content to the page
-    content.append(tab);
+    parent.append(tab);
 }
 
 function createPage(){
@@ -23,13 +23,13 @@ function createPage(){
     const home = document.createElement("a");
     home.textContent = "home";
     home.addEventListener('click', ()=>{
-        switchTab(homePage())
+        switchTab(content, homePage())
     });
     
     const menu = document.createElement("a");
     menu.textContent = "menu";
     menu.addEventListener('click', ()=>{
-        switchTab(menuPage())
+        switchTab(content, menuPage())
     });
     const idk = document.createElement("a");
     idk.textContent = "idk";
@@ -37,7 +37,7 @@ function createPage(){
     const contact = document.createElement("a");
     contact.textContent = "contact";
     contact.addEventListener('click', ()=>{
-        switchTab(aboutPage())
+        switchTab(content, aboutPage())
     });
     
     const footer = document.createElement("div");
@@ -46,7 +46,7 @@ function createPage(){
     footerContent.textContent = "www.Instagram.com/JoeSupreme";
 
     body.append(navbar, content, footer);
-    switchTab(homePage());
+    switchTab(content, homePage());
     navbar.append(home, menu, idk, contact);
     footer.appendChild(footerContent);
 }
